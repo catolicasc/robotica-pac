@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <style>
+        /* Use essa referencia para cores, copie formas tambem */
+        /* https://tailwindcss.com/docs/customizing-colors */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto";
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: #fbfbfa;
+            width: 13%;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+        }
+
+
+        .menu-item {
+            margin-bottom: 10px;
+            margin-left: 5px;
+            background-color: #0d9488;
+            width: 150px;
+            padding: 5px;
+            border-radius: 7px;
+        }
+
+        .menu-item a {
+            color: #f2f2f2;
+            text-decoration: none;
+
+        }
+
+        .menu-item:hover {
+            opacity: 0.5;
+        }
+
+        .content {
+            margin-left: 20%;
+            padding: 20px;
+        }
+
+        .container-img {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        /* Adicionei essa animaca para ficar maior a imagem */
+        .zoom {
+            transition: transform .2s;
+
+        }
+
+        .zoom:hover {
+            transform: scale(1.2);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <ul class="menu">
+                <!-- items do menu -->
+                <li class="menu-item">
+                    <a href="#logica">
+                        LÓGICA DE PROGRAMAÇÃO
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#variaveis">
+                        Variáveis
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#tiposDocumentos">
+                        Tipos de dados
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#entrada-usuario">
+                        Entrada do usuário
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#operadores">
+                        Operadores
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#estruturaDecisao">
+                        Estrutura de Decisão
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#estruturaDeRepeticao">
+                        Estruturas de Repetição
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#vetor">
+                        Vetor
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#conceitoFuncEVet">
+                        3º CONCEITO DE VARIAVEL, FUNÇÃO E VETOR pt.2
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#pratica">
+                        4º NA PRÁTICA
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <main class="content">
+
+
+            <!-- Adicione uma section para cada item do MENU -->
+            <section id="logica">
+                <h2>LÓGICA DE PROGRAMAÇÃO</h2>
+                <p>
+                    A programação define a ação de um sistema da informação, então deve ser realizada de forma
+                    criteriosa e detalhada, pois na prática um computador ou uma Inteligência artificial são como uma
+                    folha em branco onde o que você trouxer a ela vai determinar o seu sentido.
+
+                </p>
+                <p>
+                    Pense em uma receita de bolo, como você espera que uma pessoa realize a receita se tudo o que você
+                    disse foi “misture os ingredientes, bata no liquidificador, coloque no forno e está pronto”, nesse
+                    caso faltaram diversas informações, como especificar os ingredientes, onde estão os ingredientes, a
+                    ordem de mistura, o tempo no liquidificador, a temperatura do forno e etc ou acontecerá algo como
+                    isso:
+                </p>
+                <div class="container-img">
+                    <img class="zoom" src="imagens/meme.jfif" alt="">
+                </div>
+                <p>
+                    Agora, abram o bloco de notas e façam um passo a passo de uma receita de pipoca, na panela de fogão,
+                    utilizando manteiga e sal, procurando ser detalhados para que o programa ou o robô entendam.
+                    (Ferramenta Dontpad <a href="https://dontpad.com/" target="_blank">https://dontpad.com/</a>)
+                </p>
+                <p>
+                    Como vocês puderam ver, a programação tem que ser bastante detalhada e compreensível, mas também
+                    temos muita lógica por trás de tudo, são sequências de códigos para realizar uma sequência lógica de
+                    ações, então, para começarmos a exercitar a nossa lógica, iremos jogar um breve joguinho, a Torre de
+                    Hanói.
+                </p>
+                <p>
+                    Observe a imagem e, utilizando a ferramenta Dontpad, ou do bloco de notas, escreva a sequência da
+                    transferência dos 3 discos da haste A para a haste C, podendo mover apenas um disco de cada vez,
+                    mantendo a sequência de tamanhos, lembrando que um disco maior nunca pode estar sobre um disco
+                    menor, utilize a escrita (mova o disco <1> da haste <A> para a haste <C> *enter*).
+                </p>
+                <div class="container-img">
+                    <img src="imagens/image.gif" alt="" class="zoom">
+                </div>
+                <p>
+                    Agora, para continuar exercitando a nossa lógica, acessem o site Racha Cuca e vamos jogar os
+                    seguintes jogos:
+                </p>
+                <div>
+                    <p>
+
+                        <span><a href="https://rachacuca.com.br/jogos/o-lobo-e-a-ovelha/" target="_blank">
+                                O Lobo e a ovelha
+                            </a></span>
+                    </p>
+                    <p>
+                        <span>
+                            <a href="https://rachacuca.com.br/jogos/pinguins-numa-fria/">Pinguins numa fria</a>
+                        </span>
+                    </p>
+                </div>
+                <!-- Adicionei um exemplo de como utilizar o prism 
+                <pre class="language-javascript">
+                    <code>
+// Adicionar codigos dos exemplos
+function helloWorld() {
+    console.log("Hello, world!");
+}
+                    </code>
+                  </pre>-->
+            </section>
+
+            <section id="variaveis">
+                <h2>Variáveis</h2>
+                <p>
+                    Uma variável é um símbolo que representa um valor desconhecido ou arbitrário em um contexto
+                    específico. Ela pode assumir diferentes valores ao longo de um programa ou cálculo. As variáveis são
+                    usadas para armazenar e manipular dados em algoritmos e programas de computador. Por exemplo, em um
+                    programa simples, podemos ter a variável "idade" que armazena a idade de uma pessoa. O valor dessa
+                    variável pode ser alterado ao longo do programa, à medida que a idade da pessoa muda.
+
+                </p>
+            </section>
+
+            <section id="tiposDocumentos">
+                <h2>Tipos de Dados</h2>
+                <p>
+                    Em boa parte das linguagens de programação, é necessário informar o tipo de dado que será armazenado
+                    dentro da variável. Assim, cada tipo armazena um formato e carrega suas peculiaridades, sendo os
+                    principais:
+                </p>
+                <pre class="language-javascript">
+                    <code>
+                        | TIPO   | CONCEITO             | *REPRESENTAÇÃO | DECLARAÇÃO              |
+                        | ---    |  --- | --- | ---  | -|                |                         |
+                        | int    | Números inteiros     | %i             | int x                   |
+                        | float  | Números decimais     | %f             | float x                 |
+                        | char   | 1 Caractere          | %c             | char x;                 |
+                        | string | Cadeia de caracteres | %s             | char[] = “Waldir Braz”; |
+                                                                           char x[3] = {’Y’, ‘N’}; |
+                    </code>
+                  </pre>
+            </section>
+
+            <section id="entrada-usuario">
+                <h2>Input(ENTRADA) do usuário</h2>
+                <p>
+                    É importante saber que podemos basear nossas variáveis, em entradas do usuário, para isso usaremos a
+                    função Serial.print() e Serial.read().
+                </p>
+                <pre class="language-javascript">
+                    <code>
+                        1  
+                        2
+                        3  Serial.print("Olá, mundo");
+                        4 
+                        5
+                    </code>
+                  </pre>
+                <p>
+                    O Serial.print() foi utilizado para possibilitar a impressão de dados na porta de visualização do
+                    usuário, nesse caso, mostrar ao usuário a mensagem disponibilizada entre os parênteses.
+                </p>
+                <pre class="language-javascript">
+                    <code>
+                        1  
+                        2  int input = Serial.read();
+                        3  Serial.print("Digite um número ");
+                        4  Serial.println(input);
+                        5
+                    </code>
+                  </pre>
+                <p>
+                    Para que o usuário consiga inserir um valor numérico inteiro, é utilizado a função *Serial.read()*,
+                    que irá armazenar o valor inserido após a função *Serial.print()* ser compilada. Após executado, a
+                    variável input terá um valor decidido pelo usuário.
+                </p>
+                <p>
+                    A função Serial.println() é utilizada para adicionar um novo caractere de linha após executado,
+                    separando assim uma linha da outra para melhor e maior visibilidade.
+                </p>
+                <h2>Formas Contraídas</h2>
+                <p>
+                    As formas contraídas são uma maneira muito simples de atribuir valores a variáveis. São eles:
+                </p>
+
+                <pre class="language-javascript">
+                    <code>
+                        | OPERAÇÃO | REPRESENTAÇÃO |
+                        |    ---   |      ---      |
+                        | x++      | x = x + 1     |
+                        | y--      | y = y - 1     |
+                        | x+=y     | x = x + y     |
+                        | x-=y     | x = x - y     |
+                        | x/=y     | x = x / y     |
+                        | x*=y     | x = x * y     |
+                    </code>
+                  </pre>
+            </section>
+
+            <section id="operadores">
+                <h2>Operadores Aritméricos</h2>
+                <p>
+                    Operam sobre valores matemáticos.
+                </p>
+
+                <pre class="language-javascript">
+                    <code>
+                    | OPERAÇÃO      | REPRESENTAÇÃO |  EXEMPLO   |   RESULTADO   |
+                    |    ---        |      ---      |    ---     |      ---      |
+                    | Multiplicação |       *       | 10 * 2     | 20            |
+                    | Divisão       |       /       | 10 / 2     | 5             |
+                    | Módulo        |       %       | 10 % 4     | 2             |
+                    | Adição        |       +       | 10 + 2     | 12            |
+                    | Subtração     |       -       | 10 - 2     | 8             |
+                    </code>
+                  </pre>
+
+                <h2>Operadores Relacionais</h2>
+                <p>
+                    Operam sobre valores relacionais, sendo utilizados em comparação entre valores…
+                </p>
+
+                <pre class="language-javascript">
+                    <code>
+                        | OPERAÇÃO         | SINAL | EXEMPLO |
+                        |   ---            |  ---  |   ---   |
+                        | Atribuição       |   =   | x = 10  |
+                        | Comparação       |   ==  | x == 10 |
+                        | Diferente        |   !=  | x != 10 |
+                        | Maior que        |   >   | x > 10  |
+                        | Menor que        |   <   | x < 10  |
+                        | Maior ou igual a |   >=  | x >= 10 |
+                        | Menor ou igual a |   <=  | x <= 10 |
+                    </code>
+                  </pre>
+            </section>
+
+            <section id="operadores">
+                <h2>Operadores Lógicos</h2>
+                <p>
+                    Operam sobre valores booleanos, comparando condições lógicas.
+                </p>
+                <pre class="language-javascript">
+                    <code>
+                        | OPERAÇÃO | SINAL | EXEMPLO             |
+                        | ---      | ---   | ---                 |
+                        | Negação  |   !   | !true == false      |
+                        |                  |  !false == true     |
+                        | E/ And   |   &&  | (x < 10) && (x > 0) |
+                        | Ou/ Or   |   ||  | (x < 10) || (x > 0) |
+                    </code>
+                  </pre>
+                <p>
+                    Para entender melhor sobre operadores lógicos, é interessante consultar o que chamamos de “Tabela
+                    Verdade”, envolvendo o uso dos operadores && e ||.
+                </p>
+                <pre class="language-javascript">
+                    <code>
+                        
+        | P | Q | P && Q |                                          | P | Q | P || Q |
+        |  ---  |  ---   |                                          | ----  | ------ | 
+        | V | V | V      |                                          | V | V | V      |
+        | V | F | V      |                                          | V | F | F      |
+        | F | V | V      |                                          | F | V | F      |
+        | F | F | F      |                                          | F | F | F      |
+                                   
+                                       
+                                  
+                                           
+                                   
+ 
+
+                        
+     && → Será True se TODOS os operandos forem True.               || → Será True se no mínimo UM dos operandos for True.
+                        
+                    </code>
+                  </pre>
+            </section>
+            <section id="estruturaDecisao">
+                <h2>Estrutura de Decisão</h2>
+                <p>
+                    A estrutura condicional permite que o programa execute diferentes ações com base em condições
+                    específicas. Assim:
+                </p>
+                <p>
+                    - Se a condição for atendida (T), o programa segue um caminho;
+                </p>
+                <p>
+                    - Se a condição não for atendida (F), o programa segue outro caminho.
+                </p>
+                <p>
+                    Diante dessas circunstâncias, é possível destacar as principais estruturas de decisão:
+                </p>
+
+                <h3>IF</h3>
+                <p>
+                    Irá realizar algo caso a sua condição retorne true.
+                </p>
+                <pre class="language-javascript">
+                        <code>
+                     1       int a = 10;
+                     2       
+                     3       void setup() {
+                     4         Serial.begin(9600);
+                     5       }
+                     6       
+                     7       void loop() {
+                     8         if (a == 10) {
+                     9           Serial.println("A condição é verdadeira!");
+                     10         }
+                     11       delay(1000);
+                     12     }
+                        </code>
+                      </pre>
+                <h3>ELSE IF</h3>
+                <p>
+                    Múltiplas condições em forma de cascata, o else if adiciona mais um condição caso o if anterior
+                    retorne false, permitindo utilizar um else no final para exceções.
+                </p>
+                <pre class="language-javascript">
+                        <code>
+                     1       int a = 10;
+                     2       
+                     3       void setup() {
+                     4         Serial.begin(9600);
+                     5       }
+                     6      void loop() {
+                     7       if (a < 10) {
+                     8        Serial.println("a é menor do que 10");
+                     9       } else if (a > 10) {
+                     10       Serial.println("a é maior do que 10");
+                     11      } else if (a == 10) {
+                     12       Serial.println("a é igual a 10");
+                     13      } else {
+                     14       Serial.println("a é um valor inválido!");
+                     15      }
+                     16       delay(1000);
+                     17      }
+                        </code>
+                      </pre>
+                <p>
+                    Ao rodar o exemplo, será obtido o terceiro print, “A é igual a 10”, o código irá rodar as condições
+                    uma a uma, porém como a variável a não é maior nem menor do que 10, elas retornaram false, enquanto
+                    a condição de igual retornará true e executará o código em seu interior.
+                </p>
+
+                <h2>Operadores Ternários</h2>
+                <p>
+                    Resumidamente, os operadores ternários representam uma forma simplificada do if, tendo sua estrutura
+                    composta por três operações:
+                </p>
+
+                <pre class="language-javascript">
+                    <code>
+                        EXEMPLO DE CÓDIGO
+
+                        condição ? if(true) : else(false)
+                    </code>
+                  </pre>
+
+                <h3>Switch-Case</h3>
+                <p>
+                    Estrutura de escolha ou seleção utilizada para selecionar uma opção verdadeira, isto é, quando é
+                    preciso uma quantidade maior de condições. Além disso, uma de suas exclusividades é aceitar
+                    critérios apenas do tipo inteiro ou char.
+                </p>
+                <P>
+                    A instrução break associada a cada case garante que o programa saia da condicional switch e execute
+                    a instrução que segue logo após a switch. Caso o break seja omitido, o programa continua a execução
+                    para a próxima instrução dentro do switch (até encontrar um “break”) - se nenhum “break” for
+                    encontrado, o programa pode executar códigos indesejados ou até entrar em um loop infinito.
+                </P>
+
+                <pre class="language-javascript">
+                    <code>
+                     1   int input;
+                     2
+                     3  void setup() {
+                     4    Serial.begin(9600);
+                     5  }
+                     6   
+                     7  void loop() {
+                     8    switch(input){
+                     9      case 1: 
+                     10       Serial.println("Opção 1.");
+                     11     case 2: 
+                     12       Serial.println("Opção 2.");
+                     13     case 3: 
+                     14       Serial.println("Opção 3.");
+                     15     default:
+                     16       Serial.println("Opção reserva.");
+                     17   }
+                     18   delay(1000);
+                     19 }
+                    </code>
+                  </pre>
+            </section>
+            <section id="estruturaDeRepeticao">
+                <h2>Estruturas de Repetição</h2>
+                <p>
+                    Repete um trecho de código até que seja indicado o contrário, isso pode ser atingido com um contador
+                    ou uma condição, os tipos de estrutura de repetição são for, while, e do while.
+                </p>
+                <h3>For</h3>
+                <p>
+                    For é uma estrutura de repetição que só funciona em loops controlados por contador, sendo necessário
+                    o uso de uma variável como contador para sofrer um acréscimo (x++) ou decréscimo (x--) ao final do
+                    bloco de instruções interno.
+                </p>
+                <p>
+                    Sua lógica e estrutura é composta da seguinte forma:
+                </p>
+
+                <pre class="language-javascript">
+                    <code>
+1  for(inicialização; condição; contador/incremento){       | 1  int i;
+2   codificação (True);                                     | 2    for(int i = 0; i >= 10; i++) {
+3  }                                                        | 3    Serial.println("Valor de i:");
+4                                                           | 4     Serial.println(i);
+5                                                           | 5	}
+ - Inicialização
+
+   Ao contador é atruibuído um valor inicial                 Aqui o i será impresso 11 vezes, 
+                                                             seu valor aumentará a cada repetição do laço, indo de 0 a 11.                            
+                    </code>
+                  </pre>
+                <h4>Incremento</h4>
+                <p>
+                    Após a execução do bloco interno, o contador usa formas contraídas para reiniciar o loop.
+                </p>
+                <p>
+                    for(inicialiação; condição; i++){
+                </p>
+
+                <h3>While</h3>
+                <p>
+                    Dada uma verificação/condição, o bloco de instruções é executado enquanto a condição resultar True
+                    e,
+                    quando resultar False, a execução sai do laço de repetição e executa os próximos comandos. A
+                    condição while deve ser alterada dentro do while, com um contador. Assim, essa estrutura faz a
+                    verificação das condições e executa as instruções dentro de seu laço.
+                </p>
+                <pre class="language-javascript">
+                    <code>
+                        int a = 1;
+
+                        while(a) {
+                            Serial.println("rodando");
+                        }
+
+                        Código rodará “infinitamente”
+                    </code>
+                  </pre>
+                <h3>Do while</h3>
+                <p>Essa estrutura de repetição repete a instrução enquanto a condição for True, mas a condição é
+                    verificada após a instrução “do” (ao contrário da estrutura while). Portanto, se o contador for
+                    alterado dentro da instrução, isso afetará a verificação da condição. Esta estrutura é bastante
+                    utilizada quando é preciso executar o bloco de instruções interno pelo menos uma vez.
+                </p>
+                <h4>EXEMPLO DE CÓDIGO</h4>
+            </section>
+            <section id="vetor">
+                <h3>Vetor</h3>
+                <p>
+                    Em programação, um vetor é uma estrutura de dados que armazena uma sequência de elementos do mesmo
+                    tipo em uma única variável. Cada elemento do vetor é acessado por um índice, que representa sua
+                    posição na sequência. Os vetores são usados para armazenar coleções de dados de forma organizada e
+                    eficiente.
+                </p>
+                <p>
+                    Em C, um vetor é declarado especificando o tipo dos elementos e o tamanho do vetor. Aqui está um
+                    exemplo de declaração de um vetor de inteiros em C:
+                </p>
+                <pre class="language-javascript">
+                    <code>
+                     1   void setup() {
+                     2  
+                     3   Serial.begin(9600); 
+                     4  }
+                     5  
+                     6   
+                     7  void loop() {
+                     8    int numeros[5]; 
+                     9     numeros[0] = 10;
+                     10    numeros[1] = 20;
+                     11    numeros[2] = 30;
+                     12    numeros[3] = 40;
+                     13    numeros[4] = 50;
+                     14         
+                     15    Serial.println("Elementos do vetor:");
+                     16    Serial.println(numeros[0]);
+                     17    Serial.println(numeros[1]);  
+                     18    Serial.println(numeros[2]);
+                     19    Serial.println(numeros[3]);
+                     20    Serial.println(numeros[4]);
+                     21   delay(1000);
+                     22 }
+                    </code>
+                  </pre>
+
+                <p>
+                    Neste exemplo, declaramos um vetor de inteiros chamado numeros com tamanho 5. Cada elemento do vetor
+                    é acessado utilizando o nome do vetor seguido de um índice entre colchetes, como numeros[0],
+                    numeros[1], e assim por diante.
+                </p>
+
+                <h3>Funções</h3>
+                <p>
+                    Em programação, uma função é um bloco de código que realiza uma tarefa específica e pode ser chamado
+                    ou invocado a partir de outros locais do programa. Uma função pode receber valores de entrada,
+                    chamados de argumentos ou parâmetros, e pode retornar um valor como resultado.
+                </p>
+                <p>
+                    Aqui está um exemplo simples de uma função em C que recebe dois números inteiros e retorna a soma
+                    deles:
+                </p>
+
+                <pre class="language-javascript">
+                    <code>
+                        1  void setup() {
+                        2    Serial.begin(9600); 
+                        3  }
+                        4  
+                        5  int somar(int num1, int num2) {
+                        6    int resultado = num1 + num2;
+                        7    return resultado;
+                        8  }
+                        9  
+                        10   void loop() {
+                        11    int a = 5;
+                        12    int b = 3;
+                        13    int resultado_soma = somar(a, b);
+                        14  
+                        15      Serial.print("O resultado da soma de ");
+                        16      Serial.print(a);
+                        17      Serial.print(" e ");
+                        18      Serial.print(b);
+                        19      Serial.print(" é: ");
+                        20      Serial.println(resultado_soma);
+                        21  
+                        22    delay(1000);
+                        23  }
+                    </code>
+                  </pre>
+                <p>
+                    Essa é apenas uma ilustração básica de uma função em programação. As funções podem ser mais
+                    complexas, aceitar vários parâmetros, não retornar valores ou ter outros comportamentos específicos,
+                    dependendo da linguagem de programação utilizada.
+                </p>
+            </section>
+            <section id="conceitoFuncEVet">
+                <h2>3º CONCEITO DE VARIAVEL, FUNÇÃO E VETOR pt.2</h2>
+                <p>
+                    Aqui está um exemplo de definição de função em C que realiza uma saudação simples:
+                </p>
+
+                <pre class="language-javascript">
+                    <code>
+                        1  void setup() {
+                        2    Serial.begin(9600);
+                        3  }
+                        4  
+                        5  void saudacao(const char* nome) {
+                        6     Serial.print("Olá, ");
+                        7     Serial.print(nome);
+                        8     Serial.println("! Bem-vindo!");
+                        9  }
+                        10  
+                        11  void loop() {
+                        12    char nome_usuario[20] = "João";
+                        13    saudacao(nome_usuario);
+                        14  
+                        15    delay(1000); 
+                        16  }
+                    </code>
+                  </pre>
+
+                <p>
+                    Neste exemplo, temos a função saudacao que recebe um parâmetro nome do tipo char*, que representa
+                    uma string. Dentro do corpo da função, utilizamos a função printf para imprimir a saudação na tela.
+                </p>
+                <p>
+                    No main, criamos uma variável nome_usuario do tipo char para armazenar o nome do usuário. Em
+                    seguida, chamamos a função saudacao passando o nome do usuário como argumento.
+                </p>
+                <p>
+                    Compile e execute o programa e você verá a mensagem de saudação "Olá, João! Bem-vindo!" impressa na
+                    tela.
+                </p>
+                <p>
+                    Lembre-se de incluir a biblioteca stdio.h para utilizar a função printf e declarar a função saudacao
+                    antes de chamá-la no main.
+                </p>
+                <p>
+                    Aqui está um exemplo simples de código em C utilizando uma variável do tipo float:
+                </p>
+
+                <pre class="language-javascript">
+                    <code>
+                        1   void setup() {
+                        2    Serial.begin(9600);
+                        3  }
+                        4  
+                        5   void loop() {
+                        6    float altura = 1.75;
+                        7  
+                        8     Serial.print("A altura é: ");
+                        9     Serial.print(altura, 2);
+                        10    Serial.println(" metros");
+                        11  
+                        12    delay(1000); 
+                        12  }
+                         
+                        _____________________________________________  
+
+                          1 void setup() {
+                          2   Serial.begin(9600); 
+                          3 }
+                          4
+                          5   float calcularMedia(float a, float b) {
+                          6    return (a + b) / 2;
+                          7  }
+                          8
+                          9   void loop() {
+                          10   float nota1 = 7.5;
+                          11   float nota2 = 8.2;
+                          12 
+                          13  float media = calcularMedia(nota1, nota2);
+                          14
+                          15  Serial.print("A média das notas é: ");
+                          16  Serial.print(media, 2); // Imprime a média com 2 casas decimais
+                          17  Serial.println();
+                          18
+                          19  delay(1000);
+                          20 }
+                    </code>
+                  </pre>
+
+                <p>
+                    As funções desempenham um papel crucial na programação, independentemente da linguagem utilizada,
+                    incluindo a programação para Arduino. Elas permitem que você estruture seu código em segmentos
+                    independentes para realizar tarefas específicas. A criação de funções é especialmente útil quando
+                    você precisa executar uma mesma ação várias vezes em um programa.
+                </p>
+                <p>
+                    Aqui estão algumas das principais razões pelas quais o uso de funções é importante:
+                </p>
+                <p>
+                    1. Organização: As funções ajudam os programadores a se manterem organizados. Ao dividir o código em
+                    funções, é possível conceituar o programa de forma mais clara, facilitando a compreensão e a
+                    manutenção futura.
+                </p>
+                <p>
+                    2. Reutilização de código: Ao definir uma função para uma determinada tarefa, você pode reutilizá-la
+                    em diferentes partes do programa. Isso torna o código mais compacto e reduz a redundância, pois as
+                    seções do código são reaproveitadas várias vezes.
+                </p>
+                <p>
+                    3. Modularidade: O uso de funções torna o código mais modular, permitindo que você separe diferentes
+                    partes lógicas do programa em funções independentes. Isso facilita a compreensão do código e sua
+                    reutilização em outros projetos.
+                </p>
+                <p>
+                    4. Facilidade de depuração: Ao escrever código em forma de funções, você pode isolar e depurar cada
+                    função separadamente. Isso torna a identificação e correção de erros mais fácil, uma vez que você só
+                    precisa analisar e depurar uma função de cada vez.
+                </p>
+                <p>
+                    No contexto específico do Arduino, a utilização de funções é fundamental. Além das funções padrão
+                    setup() e loop() que são necessárias em todo esboço do Arduino, é possível criar funções
+                    personalizadas para realizar tarefas específicas. Essas funções podem ser declaradas fora dos
+                    colchetes das funções setup() e loop(), seguindo a sintaxe padrão da linguagem C++.
+                </p>
+                <p>
+                    Ao criar funções no Arduino, você pode encapsular diferentes partes do código em funções
+                    independentes, facilitando a organização e a compreensão do programa. Por exemplo, você pode criar
+                    uma função para ler dados de sensores, outra para processar esses dados e uma terceira para
+                    controlar ações com base nos resultados. Isso permite um código mais estruturado e modular, além de
+                    facilitar a manutenção e a reutilização em outros projetos Arduino.
+                </p>
+            </section>
+            <section id="pratica">
+                <h2>4º NA PRÁTICA</h2>
+                <P>
+                    1. Construa um programa que mostre seus dados pessoais em tela como: nome, endereço, telefone e
+                    e-mail.
+                </P>
+                <p>
+                    2. Construa um algoritmo que peça uma temperatura em graus Celsius (ºC), transforme e mostre na tela
+                    a temperatura em graus Fahrenheit (ºF).
+                </p>
+                <p>
+                    3. Construa um algoritmo que peça a temperatura em graus Fahrenheit (ºF), transforme e mostre na
+                    tela a temperatura em graus Celsius (ºC). C=5*(F-32)/9}
+                </p>
+                <p>
+                    4. Construa um algoritmo que peça 4 notas, calcule a média dessas notas e imprima na tela o
+                    resultado.
+                </p>
+                <p>
+                    5. Construa um algoritmo que leia um vetor de 10 números inteiros e imprima-os na tela.
+                </p>
+
+                <h2>Exemplos utilizando Tinkercad:</h2>
+
+                <h3>Acender um LED</h3>
+                <div class="container-img">
+                    <img class="zoom" src="imagens/acenderLed.png" alt="">
+                </div>
+
+                <h3>Semáforo</h3>
+                <div class="container-img">
+                    <img class="zoom" src="imagens/semafaro.png" alt="">
+                </div>
+
+                <h3>Carrinho com dois motores DC controlado por Arduino</h3>
+                <div class="container-img">
+                    <img class="zoom" src="imagens/carrinho.png" alt="">
+                </div>
+
+                <pre class="language-javascript">
+                    <code>
+                        // Segue exemplo de código para funiconalidade de 2 motores (Código completo)
+
+1  const int motorPin1  = 5; 
+2  const int motorPin2  = 6; 
+3
+4  const int motorPin3  = 10;
+5  const int motorPin4  = 9; 
+6
+7  int sensorPin1 = A3; 
+8  int sensorPin2 = A4; 
+9  int sensorPin3 = A5; 
+10 int sensorValue1 = 0;
+11 int sensorValue2 = 0;
+12 int sensorValue3 = 0;
+13 
+14 int lL = 12;
+15 int lR = 11;
+16 int lF = 2;
+17 int lB = 3;
+18
+19  void setup(){
+20    pinMode(motorPin1, OUTPUT);
+21    pinMode(motorPin2, OUTPUT);
+22    pinMode(motorPin3, OUTPUT);
+23    pinMode(motorPin4, OUTPUT);
+24	  pinMode(sensorPin1, INPUT);
+25    pinMode(sensorPin2, INPUT);
+26    pinMode(sensorPin3, INPUT);
+27    pinMode(lL, OUTPUT);
+28    pinMode(lR, OUTPUT);
+29    pinMode(lF, OUTPUT);
+30    pinMode(lB, OUTPUT);
+31
+32 }
+33
+34
+35   void loop(){
+36    sensorValue1 = analogRead(sensorPin1); 
+37    sensorValue2 = analogRead(sensorPin2); 
+38    sensorValue3 = analogRead(sensorPin3); 
+39  
+40  if(sensorValue2 > 700){
+41     digitalWrite(motorPin1, LOW);
+42     digitalWrite(motorPin2, HIGH);
+43     digitalWrite(motorPin3, LOW);
+44     digitalWrite(motorPin4, HIGH);
+45     digitalWrite(lL, LOW);
+46     digitalWrite(lR, LOW);
+47     digitalWrite(lF, LOW);
+48     digitalWrite(lB, HIGH);
+49  }else if(sensorValue1 > 700){
+50     digitalWrite(motorPin1, LOW);
+51     digitalWrite(motorPin2, HIGH);
+52     digitalWrite(motorPin3, HIGH);
+53     digitalWrite(motorPin4, LOW);
+54     digitalWrite(lL, HIGH);
+55     digitalWrite(lR, LOW);
+56     digitalWrite(lF, LOW);
+57     digitalWrite(lB, LOW);
+58  }else if(sensorValue3 > 700){
+59     digitalWrite(motorPin1, HIGH);
+60     digitalWrite(motorPin2, LOW);
+61     digitalWrite(motorPin3, LOW);
+62     digitalWrite(motorPin4, HIGH);
+63     digitalWrite(lL, LOW);
+64     digitalWrite(lR, HIGH);
+65     digitalWrite(lF, LOW);
+66     digitalWrite(lB, LOW);
+67  }else{
+68     digitalWrite(motorPin1, HIGH);
+69     digitalWrite(motorPin2, LOW);
+70     digitalWrite(motorPin3, HIGH);
+71     digitalWrite(motorPin4, LOW);
+72     digitalWrite(lL, LOW);
+73     digitalWrite(lR, LOW);
+74     digitalWrite(lF, HIGH);
+75     digitalWrite(lB, LOW);
+76  }
+77    
+78}
+                    </code>
+                  </pre>
+            </section>
+        </main>
+    </div>
+    <script src="js/prism.js"></script>
+
+</body>
+
+</html>

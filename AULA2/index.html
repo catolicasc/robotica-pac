@@ -176,17 +176,17 @@
 
                 <p>
                 <ol>
-                    <li>Função setup() e loop(): No Arduino, o código principal é dividido em duas funções principais:
-                        setup() e loop(). A função setup() é executada apenas uma vez, no início do programa, e é usada
+                    <li>Função <span id="corTexto">setup()</span> e <span id="corTexto">loop()</span>: No Arduino, o código principal é dividido em duas funções principais:
+                        <span id="corTexto">setup()</span> e <span id="corTexto">loop()</span>. A função <span id="corTexto">setup()</span> é executada apenas uma vez, no início do programa, e é usada
                         para realizar as configurações iniciais, como inicializar pinos, definir velocidades de
-                        comunicação, etc. Já a função loop() é executada repetidamente em um loop infinito após a função
-                        setup() e é onde você escreve o código principal do seu programa, que será executado
+                        comunicação, etc. Já a função <span id="corTexto">loop()</span> é executada repetidamente em um loop infinito após a função
+                        <span id="corTexto">setup()</span> e é onde você escreve o código principal do seu programa, que será executado
                         continuamente.</li>
-                    <li>Função analogRead(): No Arduino, para ler os valores de uma porta analógica, você usa a função
-                        analogRead() em vez da função scanf() ou fscanf() usadas em C. A função analogRead() retorna um
+                    <li>Função <span id="corTexto">analogRead()</span>: No Arduino, para ler os valores de uma porta analógica, você usa a função
+                        <span id="corTexto">analogRead()</span> em vez da função <span id="corTexto">scanf()</span> ou <span id="corTexto">fscanf()</span> usadas em C. A função <span id="corTexto">analogRead()</span> retorna um
                         valor inteiro representando a leitura analógica.</li>
-                    <li>Função pinMode(): Para configurar um pino como entrada ou saída no Arduino, você utiliza a
-                        função pinMode(). Essa função permite definir a direção do fluxo de dados em um pino específico.
+                    <li>Função <span id="corTexto">pinMode()</span>: Para configurar um pino como entrada ou saída no Arduino, você utiliza a
+                        função <span id="corTexto">pinMode()</span>. Essa função permite definir a direção do fluxo de dados em um pino específico.
                     </li>
                     <li>Funções específicas do Arduino: O Arduino possui uma série de funções e bibliotecas específicas
                         para acessar seus recursos, como leitura de sensores, controle de atuadores, comunicação serial,
@@ -258,8 +258,8 @@
                             | P | Q | P && Q |                                          | P | Q | P || Q |
                             |  ---  |  ---   |                                          | ----  | ------ | 
                             | V | V | V      |                                          | V | V | V      |
-                            | V | F | V      |                                          | V | F | F      |
-                            | F | V | V      |                                          | F | V | F      |
+                            | V | F | F      |                                          | V | F | V      |
+                            | F | V | F      |                                          | F | V | V      |
                             | F | F | F      |                                          | F | F | F      |                   
                             
                 && → Será True se TODOS os operandos forem True.               || → Será True se no mínimo UM dos operandos for True.                     
@@ -350,7 +350,7 @@
 
         <pre class="language-javascript">
             <code>
-             1   int input;
+             1   int input = 1;
              2
              3  void setup() {
              4    Serial.begin(9600);
@@ -360,15 +360,19 @@
              8    switch(input){
              9      case 1: 
              10       Serial.println("Opção 1.");
-             11     case 2: 
-             12       Serial.println("Opção 2.");
-             13     case 3: 
-             14       Serial.println("Opção 3.");
-             15     default:
-             16       Serial.println("Opção reserva.");
-             17   }
-             18   delay(1000);
-             19 }
+             11       break;
+             12     case 2: 
+             13       Serial.println("Opção 2.");
+             14       break;
+             15     case 3: 
+             16       Serial.println("Opção 3.");
+             17       break;
+             18     default:
+             19       Serial.println("Opção reserva.");
+             20       break;
+             21   }
+             22   delay(1000);
+             23 }
             </code>
         </pre>
             </section>

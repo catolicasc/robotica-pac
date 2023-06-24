@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/prism.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <ul class="menu">
+                <!-- items do menu -->
+                <li class="menu-item">
+                    <a href="#revisao">
+                        Revisão
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#EleArduino">
+                        Eletrônica Para Arduino
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#CArdu">
+                        Usando C no arduino
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#pratica">
+                        Colocando em prática pt.1
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="#operadores">
+                        Operadores
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="#estruturaDecisao">
+                        Estrutura de Decisão
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="#pratica2">
+                        Colocando em prática pt.2
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <main class="content">
+
+            <section id="revisao">
+                <h2>Tipos de Dados</h2>
+                <p>
+                    Em boa parte das linguagens de programação, é necessário informar o tipo de dado que será armazenado
+                    dentro da variável. Assim, cada tipo armazena um formato e carrega suas peculiaridades, sendo os
+                    principais:
+                </p>
+                <pre class="language-javascript">
+                    <code>
+                | TIPO   | CONCEITO             | *REPRESENTAÇÃO | DECLARAÇÃO                 |
+                | ---    |  --- | --- | ---  | -|                |                            |
+                | int    | Números inteiros     | %i             | int x                      |
+                | float  | Números decimais     | %f             | float x                    |
+                | char   | 1 Caractere          | %c             | char x;                    |
+                | string | Cadeia de caracteres | %s             | char nomeVariavel[tamanho] |
+                    </code>
+                  </pre>
+
+                <h2>Operadores Aritméricos</h2>
+                <p>
+                    Operam sobre valores matemáticos.
+                </p>
+
+                <pre class="language-javascript">
+                    <code>
+                | OPERAÇÃO      | REPRESENTAÇÃO |  EXEMPLO   |   RESULTADO   |
+                |    ---        |      ---      |    ---     |      ---      |
+                | Multiplicação |       *       | 10 * 2     | 20            |
+                | Divisão       |       /       | 10 / 2     | 5             |
+                | Módulo        |       %       | 10 % 4     | 2             |
+                | Adição        |       +       | 10 + 2     | 12            |
+                | Subtração     |       -       | 10 - 2     | 8             |
+                </code>
+            </pre>
+
+            <h2>Entrada de Dados dos Usuários</h2>
+            <pre class="language-javascript">
+                <code>
+                |       OPERAÇÃO    |               SINAL               |        EXEMPLO            |
+                |        ---        |               ---                 |          ---              |
+                |       printf      |   Apresenta os dados na tela      | printf( “Olá mundo”);     |
+                |                   |                                   | printf(“i%”, variável);   |
+                |       scanf       |   Pede a para inserir os dados    | scanf( “i%”, &variável);  |
+                </code>
+            </pre>
+
+            </section>
+            <!-- Adicione uma section para cada item do MENU -->
+            <section id="EleArduino">
+                <h2>Eletrônica Para Arduino</h2>
+                <p>
+                    O Arduino é uma plataforma de prototipagem eletrônica amplamente utilizada,
+                    especialmente na área de robótica e projetos eletrônicos.
+                    Aqui estão alguns conceitos de eletrônica relacionados ao Arduino:
+
+                </p>
+                <p>
+                <ol>
+                    <li>Microcontrolador: O Arduino é baseado em um microcontrolador, que é um chip integrado que contém
+                        um processador, memória e periféricos de entrada/saída. O microcontrolador é o "cérebro" do
+                        Arduino e executa o código que controla o funcionamento do projeto.</li>
+                    <li>Pinos de E/S: O Arduino possui pinos de entrada/saída (I/O) que permitem a comunicação com
+                        outros dispositivos eletrônicos. Esses pinos podem ser configurados como entrada (para receber
+                        informações) ou saída (para enviar informações).</li>
+                    <li>Tensão de Alimentação: O Arduino geralmente é alimentado por uma fonte de energia externa, como
+                        uma bateria ou uma fonte de alimentação. É importante entender a tensão de alimentação suportada
+                        pelo Arduino e fornecer a tensão adequada para seu correto funcionamento.</li>
+                    <li>Pinos Digitais: Os pinos digitais do Arduino são utilizados para sinais binários, onde podem ser
+                        configurados como entrada ou saída. Eles são usados para enviar e receber sinais de nível lógico
+                        alto (5V) ou baixo (0V).</li>
+                    <li>Pinos Analógicos: O Arduino também possui pinos analógicos que são usados para entrada de sinais
+                        analógicos. Eles permitem a leitura de valores contínuos, como sensores de luz, temperatura,
+                        umidade, entre outros.</li>
+                    <li>PWM (Modulação por Largura de Pulso): O Arduino tem a capacidade de gerar sinais PWM nos pinos
+                        digitais. A modulação por largura de pulso é utilizada para controlar a intensidade de um sinal,
+                        permitindo o controle de brilho de um LED, velocidade de um motor, entre outros.</li>
+                    <li>Comunicação Serial: O Arduino suporta comunicação serial, permitindo a troca de dados com outros
+                        dispositivos. Isso pode ser feito por meio dos pinos de comunicação serial (RX, TX) ou por meio
+                        de interfaces como I2C e SPI.</li>
+                    <li>Bibliotecas: O Arduino possui uma ampla variedade de bibliotecas que fornecem funções e recursos
+                        adicionais para simplificar o desenvolvimento de projetos. Essas bibliotecas incluem
+                        funcionalidades para controle de motores, leitura de sensores, exibição em displays, entre
+                        outros.</li>
+                    <li>Shields: Os shields são placas de expansão que se encaixam no topo do Arduino e fornecem
+                        funcionalidades adicionais, como conectividade Wi-Fi, Ethernet, GPS, controle de motores, entre
+                        outros. Eles facilitam a adição de recursos extras ao Arduino.</li>
+                    <li>Programação: O Arduino é programado usando a linguagem de programação C/C++. É importante ter
+                        familiaridade com conceitos básicos de programação, como variáveis, estruturas de controle (if,
+                        loops), funções, entre outros.</li>
+                </ol>
+
+                <h3>Vídeos de Exemplos de Projetos</h3>
+                <div>
+                    <p>
+
+                        <span><a href="https://www.youtube.com/shorts/AxJuyWgrCXw" target="_blank">Vídeo 1 -
+                                Banheiro</a>
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <a href="https://www.youtube.com/shorts/kA_icsQLJww">Vídeo 2 - Dispenser</a>
+                        </span>
+                    </p>
+                </div>
+                </p>
+            </section>
+
+            <section id="CArdu">
+                <h2>Usando C no arduino</h2>
+                <p>
+                    A linguagem Arduino é uma derivação da linguagem C++, portanto,
+                    a maioria das sintaxes básicas são semelhantes.
+                    No entanto, existem algumas diferenças importantes a serem observadas:
+                </p>
+
+                <p>
+                <ol>
+                    <li>Função setup() e loop(): No Arduino, o código principal é dividido em duas funções principais:
+                        setup() e loop(). A função setup() é executada apenas uma vez, no início do programa, e é usada
+                        para realizar as configurações iniciais, como inicializar pinos, definir velocidades de
+                        comunicação, etc. Já a função loop() é executada repetidamente em um loop infinito após a função
+                        setup() e é onde você escreve o código principal do seu programa, que será executado
+                        continuamente.</li>
+                    <li>Função analogRead(): No Arduino, para ler os valores de uma porta analógica, você usa a função
+                        analogRead() em vez da função scanf() ou fscanf() usadas em C. A função analogRead() retorna um
+                        valor inteiro representando a leitura analógica.</li>
+                    <li>Função pinMode(): Para configurar um pino como entrada ou saída no Arduino, você utiliza a
+                        função pinMode(). Essa função permite definir a direção do fluxo de dados em um pino específico.
+                    </li>
+                    <li>Funções específicas do Arduino: O Arduino possui uma série de funções e bibliotecas específicas
+                        para acessar seus recursos, como leitura de sensores, controle de atuadores, comunicação serial,
+                        PWM, entre outros. Essas funções são exclusivas do ambiente Arduino e podem não estar
+                        disponíveis na linguagem C padrão.</li>
+                </ol>
+                </p>
+
+                <p>Embora existam essas diferenças na sintaxe e no ambiente de programação,
+                    o Arduino ainda é baseado na linguagem C++ e muitos dos princípios e
+                    conceitos fundamentais da linguagem C também se aplicam no contexto do Arduino.
+                    Portanto, ter um conhecimento básico de C será útil ao programar para o Arduino.
+                </p>
+
+            </section>
+
+
+            <section id="pratica">
+                <h2>Colocando em Prática pt.1</h2>
+
+                <ol>
+                    <li>Fazer um LED piscar com um intevalos de tempo.</li>
+                    <li>Semáforo - fazer 3 LED's picarem de forma intercalada.</li>
+                    <li>Variar iluminação do com potenciômetro.</li>
+                </ol>
+            </section>
+
+            <section id="operadores">
+
+                <h2>Operadores Relacionais</h2>
+                <p>
+                    Operam sobre valores relacionais, sendo utilizados em comparação entre valores…
+                </p>
+
+                <pre class="language-javascript">
+                        <code>
+                            | OPERAÇÃO         | SINAL | EXEMPLO |
+                            |   ---            |  ---  |   ---   |
+                            | Atribuição       |   =   | x = 10  |
+                            | Comparação       |   ==  | x == 10 |
+                            | Diferente        |   !=  | x != 10 |
+                            | Maior que        |   >   | x > 10  |
+                            | Menor que        |   <   | x < 10  |
+                            | Maior ou igual a |   >=  | x >= 10 |
+                            | Menor ou igual a |   <=  | x <= 10 |
+                        </code>
+                    </pre>
+
+                <h2>Operadores Lógicos</h2>
+                <p>
+                    Operam sobre valores booleanos, comparando condições lógicas.
+                </p>
+                <pre class="language-javascript">
+                        <code>
+                            | OPERAÇÃO | SINAL | EXEMPLO             |
+                            | ---      | ---   | ---                 |
+                            | Negação  |   !   | !true == false      |
+                            |                  |  !false == true     |
+                            | E/ And   |   &&  | (x < 10) && (x > 0) |
+                            | Ou/ Or   |   ||  | (x < 10) || (x > 0) |
+                        </code>
+                    </pre>
+                <p>
+                    Para entender melhor sobre operadores lógicos, é interessante consultar o que chamamos de “Tabela
+                    Verdade”, envolvendo o uso dos operadores && e ||.
+                </p>
+                <pre class="language-javascript">
+                        <code>
+                            | P | Q | P && Q |                                          | P | Q | P || Q |
+                            |  ---  |  ---   |                                          | ----  | ------ | 
+                            | V | V | V      |                                          | V | V | V      |
+                            | V | F | V      |                                          | V | F | F      |
+                            | F | V | V      |                                          | F | V | F      |
+                            | F | F | F      |                                          | F | F | F      |                   
+                            
+                && → Será True se TODOS os operandos forem True.               || → Será True se no mínimo UM dos operandos for True.                     
+            </code>
+        </pre>
+            </section>
+
+            <section id="estruturaDecisao">
+                <h2>Estrutura de Decisão</h2>
+                <p>
+                    A estrutura condicional permite que o programa execute diferentes ações com base em condições
+                    específicas. Assim:
+                </p>
+                <p>
+                    - Se a condição for atendida (T), o programa segue um caminho;
+                </p>
+                <p>
+                    - Se a condição não for atendida (F), o programa segue outro caminho.
+                </p>
+                <p>
+                    Diante dessas circunstâncias, é possível destacar as principais estruturas de decisão:
+                </p>
+
+                <h3>IF</h3>
+                <p>
+                    Irá realizar algo caso a sua condição retorne true.
+                </p>
+                <pre class="language-javascript">
+            <code>
+                1       int a = 10;
+                2       
+                3       void setup() {
+                4         Serial.begin(9600);
+                5       }
+                6       
+                7       void loop() {
+                8         if (a == 10) {
+                9           Serial.println("A condição é verdadeira!");
+                10         }
+                11       delay(1000);
+                12     }
+                        </code>
+                    </pre>
+                <h3>ELSE IF</h3>
+                <p>
+                    Múltiplas condições em forma de cascata, o else if adiciona mais um condição caso o if anterior
+                    retorne false, permitindo utilizar um else no final para exceções.
+                </p>
+                <pre class="language-javascript">
+                        <code>
+             1       int a = 10;
+             2       
+             3       void setup() {
+             4         Serial.begin(9600);
+             5       }
+             6      void loop() {
+             7       if (a < 10) {
+             8        Serial.println("a é menor do que 10");
+             9       } else if (a > 10) {
+             10       Serial.println("a é maior do que 10");
+             11      } else if (a == 10) {
+             12       Serial.println("a é igual a 10");
+             13      } else {
+             14       Serial.println("a é um valor inválido!");
+             15      }
+             16       delay(1000);
+             17      }
+            </code>
+        </pre>
+                <p>
+                    Ao rodar o exemplo, será obtido o terceiro print, “A é igual a 10”, o código irá rodar as condições
+                    uma a uma, porém como a variável a não é maior nem menor do que 10, elas retornaram false, enquanto
+                    a condição de igual retornará true e executará o código em seu interior.
+                </p>
+
+                <h3>Switch-Case</h3>
+                <p>
+                    Estrutura de escolha ou seleção utilizada para selecionar uma opção verdadeira, isto é, quando é
+                    preciso uma quantidade maior de condições. Além disso, uma de suas exclusividades é aceitar
+                    critérios apenas do tipo inteiro ou char.
+                </p>
+                <P>
+                    A instrução break associada a cada case garante que o programa saia da condicional switch e execute
+                    a instrução que segue logo após a switch. Caso o break seja omitido, o programa continua a execução
+                    para a próxima instrução dentro do switch (até encontrar um “break”) - se nenhum “break” for
+                    encontrado, o programa pode executar códigos indesejados ou até entrar em um loop infinito.
+                </P>
+
+        <pre class="language-javascript">
+            <code>
+             1   int input;
+             2
+             3  void setup() {
+             4    Serial.begin(9600);
+             5  }
+             6   
+             7  void loop() {
+             8    switch(input){
+             9      case 1: 
+             10       Serial.println("Opção 1.");
+             11     case 2: 
+             12       Serial.println("Opção 2.");
+             13     case 3: 
+             14       Serial.println("Opção 3.");
+             15     default:
+             16       Serial.println("Opção reserva.");
+             17   }
+             18   delay(1000);
+             19 }
+            </code>
+        </pre>
+            </section>
+
+            <section id="pratica2">
+                <h2>Colocando em Prática pt.2</h2>
+
+                <ol>
+                    <li>Semáforo - fazer 3 LED's picarem de forma intercalada caso um botão for precionado.</li>
+                    <li>Ligar LED com um botão e desligar o mesmo LED com outro botão.</li>
+                </ol>
+            </section>
+            <script src="js/prism.js"></script>
+
+</body>
+
+</html>
